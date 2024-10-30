@@ -1,0 +1,50 @@
+.scroll-content {
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .toolbar-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+  
+  .toolbar-image-container img {
+    max-height: 80px;
+    height: auto; 
+    margin-right: 24px;
+  }
+  
+  ion-toolbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card {
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card ion-card-header {
+    background-color: #f0f8ff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .cut-image {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+  }
+  
