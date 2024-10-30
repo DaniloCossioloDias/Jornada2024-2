@@ -1,0 +1,7 @@
+{
+  "name": "rastreamento",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
