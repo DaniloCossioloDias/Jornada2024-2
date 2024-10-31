@@ -1,0 +1,7 @@
+{
+  "name": "Telas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

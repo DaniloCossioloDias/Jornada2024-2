@@ -1,0 +1,47 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">Conteúdo menu</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Validação Pré-Corte</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <!-- Informações do Produto -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Informações do Produto</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>ID: 036285</ion-label>
+        <br />
+        <ion-label>Nome do Produto: PS5 Pro</ion-label>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Formulário de Upload de Imagem -->
+    <ion-item>
+      <ion-label position="stacked">Upload de Imagem</ion-label>
+      <input type="file" accept="image/*" (change)="onFileSelected($event)" />
+    </ion-item>
+
+    <br /><br />
+
+    <!-- Botão para tirar foto com a câmera -->
+    <ion-button expand="block" (click)="capturePhoto()">Tirar Foto</ion-button>
+
+    <!-- Botão de envio -->
+    <ion-button expand="block" color="primary" (click)="submitValidation()"
+      >Enviar</ion-button
+    >
+  </ion-content>
+</div>
