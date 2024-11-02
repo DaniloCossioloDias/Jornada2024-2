@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'pos-corte',
     loadChildren: () => import('./pos-corte/pos-corte.module').then( m => m.PosCortePageModule)
+  },
+  {
+    path: 'validacao-costura',
+    loadChildren: () => import('./validacao-costura/validacao-costura.module').then( m => m.ValidacaoCosturaPageModule)
   }
 
 ];
