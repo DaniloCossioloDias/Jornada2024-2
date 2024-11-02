@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pos-corte',
   templateUrl: './pos-corte.page.html',
   styleUrls: ['./pos-corte.page.scss'],
 })
-export class PosCortePage implements OnInit {
+export class PosCortePage{
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
-  ngOnInit() {
+  nextScreen() {
+    this.navCtrl.navigateForward('/validacao-costura');
   }
-
 }
