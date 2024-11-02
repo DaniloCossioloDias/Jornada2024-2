@@ -1,12 +1,12 @@
-import { Component} from '@angular/core';
-import {Camera, CameraResultType, CameraSource} from '@capacitor/camera';
+import { Component } from '@angular/core';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-pre-corte',
+  templateUrl: './pre-corte.page.html',
+  styleUrls: ['./pre-corte.page.scss'],
 })
-export class HomePage {
+export class PreCortePage{
   selectedImage: string | null | undefined= null;
   
   constructor() {}

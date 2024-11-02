@@ -3,18 +3,22 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'message/:id',
-    loadChildren: () => import('./view-message/view-message.module').then( m => m.ViewMessagePageModule)
+    path: 'pre-corte',
+    loadChildren: () => import('./pre-corte/pre-corte.module').then( m => m.PreCortePageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pre-corte',
     pathMatch: 'full'
+  },  {
+    path: 'pos-corte',
+    loadChildren: () => import('./pos-corte/pos-corte.module').then( m => m.PosCortePageModule)
   },
+  {
+    path: 'validacao-costura',
+    loadChildren: () => import('./validacao-costura/validacao-costura.module').then( m => m.ValidacaoCosturaPageModule)
+  }
+
 ];
 
 @NgModule({
