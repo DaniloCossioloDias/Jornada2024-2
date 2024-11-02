@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 
 @Component({
@@ -9,7 +10,7 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 export class PreCortePage{
   selectedImage: string | null | undefined= null;
   
-  constructor() {}
+  constructor(private router: Router) {}
 
   // Função para manipular a seleção de arquivo
   onFileSelected(event: Event): void {
@@ -38,8 +39,8 @@ export class PreCortePage{
   submitValidation(): void {
     if (this.selectedImage) {
       console.log('Imagem selecionada ou capturada:', this.selectedImage);
-      // Aqui é um campo para adicionar lógica para enviar a imagem a um serviço backend
       alert('Validação enviada com sucesso!');
+      this.router.navigate(['pos-corte']);
     } else {
       alert('Por favor, selecione ou capture uma imagem antes de enviar.');
     }
