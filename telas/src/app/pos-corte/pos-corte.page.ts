@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pos-corte',
@@ -7,10 +7,17 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./pos-corte.page.scss'],
 })
 export class PosCortePage{
+  detalhesTexto: string = '';
 
-  constructor(private navCtrl: NavController) { }
+  constructor(private router: Router) {}
 
   nextScreen() {
-    this.navCtrl.navigateForward('/validacao-costura');
+    const preCorteImage = localStorage.getItem('preCorteImage');
+    this.router.navigate(['/validacao-costura'], {
+      queryParams: {
+        preCorteImage: preCorteImage,
+        posCorteDetalhes: this.detalhesTexto
+      }
+    });
   }
 }

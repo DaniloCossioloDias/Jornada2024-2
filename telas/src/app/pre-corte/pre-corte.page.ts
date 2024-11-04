@@ -38,7 +38,7 @@ export class PreCortePage{
   // Função de submissão (envio de validação)
   submitValidation(): void {
     if (this.selectedImage) {
-      console.log('Imagem selecionada ou capturada:', this.selectedImage);
+      localStorage.setItem('preCorteImage', this.selectedImage);
       alert('Validação enviada com sucesso!');
       this.router.navigate(['pos-corte']);
     } else {

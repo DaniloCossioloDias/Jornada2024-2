@@ -30,6 +30,18 @@
   </ion-header>
   <ion-content class="ion-padding">
     <h2>Validação da Costura</h2>
+
+    <img
+      *ngIf="preCorteImage"
+      [src]="preCorteImage"
+      alt="Imagem anexada na tela Pré-Corte"
+    />
+    <div *ngIf="posCorteDetalhes">
+      <p >{{ posCorteDetalhes }}</p>
+    </div>
+
+    <br />
+
     <p>
       Capture uma foto da costura para verificar se atende aos padrões de
       qualidade e sustentabilidade da noWastee.
@@ -41,14 +53,21 @@
     >
 
     <!-- Área de exibição do feedback -->
-    <div *ngIf="feedback">
+    <div *ngIf="feedbackImagem">
       <ion-card>
         <ion-card-header>
-          <ion-card-title>{{ feedback.titulo }}</ion-card-title>
+          <ion-card-title>{{ feedbackImagem.titulo }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>{{ feedback.mensagem }}</p>
+          <p>{{ feedbackImagem.mensagem }}</p>
         </ion-card-content>
+      </ion-card>
+    </div>
+
+    <div *ngIf="feedbackTexto">
+      <ion-card>
+        <ion-card-title>{{ feedbackTexto.titulo }}</ion-card-title>
+        <p>{{ feedbackTexto.mensagem }}</p>
       </ion-card>
     </div>
   </ion-content>
