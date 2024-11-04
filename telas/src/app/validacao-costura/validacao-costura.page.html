@@ -56,7 +56,10 @@
     <div *ngIf="feedbackImagem">
       <ion-card>
         <ion-card-header>
-          <ion-card-title>{{ feedbackImagem.titulo }}</ion-card-title>
+          <ion-card-title id="corImgTitle" [ngClass]="{
+            'aprovado': feedbackImagem.titulo === 'Costura Aprovada',
+            'reprovado': feedbackImagem.titulo === 'Costura Reprovada'
+          }">{{ feedbackImagem.titulo }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           <p>{{ feedbackImagem.mensagem }}</p>
