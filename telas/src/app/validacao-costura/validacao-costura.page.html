@@ -1,13 +1,55 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>ValidacaoCostura</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">ValidacaoCostura</ion-title>
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item routerLink="/pre-corte" routerDirection="forward"
+        >Pré-Corte</ion-item
+      >
+      <ion-item routerLink="/pos-corte" routerDirection="forward"
+        >Pós-Corte</ion-item
+      >
+      <ion-item routerLink="/validacao-costura" routerDirection="forward"
+        >Validação Costura</ion-item
+      >
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Validação da Costura</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <h2>Validação da Costura</h2>
+    <p>
+      Capture uma foto da costura para verificar se atende aos padrões de
+      qualidade e sustentabilidade da noWastee.
+    </p>
+
+    <!-- Botão para capturar foto -->
+    <ion-button expand="full" (click)="capturarFoto()"
+      >Capturar Foto</ion-button
+    >
+
+    <!-- Área de exibição do feedback -->
+    <div *ngIf="feedback">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ feedback.titulo }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ feedback.mensagem }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+</div>
