@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div class="toolbar-image-container">
+      <img src="https://nowastee.com/wp-content/uploads/2022/11/nowastee.png" alt="Logo da Nowastee" />
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content  class="ion-padding">
+  
+    <ion-list >
+      <ion-item-sliding >
+        <ion-item class="ion-no-padding" >
+          <ion-label>
+            <h2> Nome: Lucas </h2>
+          </ion-label>
+        </ion-item>
+        <ion-item class="ion-no-padding" >
+          <ion-label>
+            <h2>Lote: 51 </h2>
+          </ion-label>
+        </ion-item>
+        <ion-item class="ion-no-padding" >
+          <ion-label>
+            <h2>Tamanho: G </h2>
+          </ion-label>
+        </ion-item>
+        <ion-item class="ion-no-padding" >
+          <ion-label>
+            <h2> Quantidade desperdiçada: 52g </h2>
+          </ion-label>
+        </ion-item>
+        <ion-item class="ion-no-padding" >
+          <ion-label>
+            <h2> Transportadora: Transportadora AX </h2>
+          </ion-label>
+        </ion-item>
+        <ion-item class="ion-no-padding" >
+          <ion-label>
+            <h2> Data prevista de entrega: 13/11/2024</h2>
+          </ion-label>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+
+    <ng-template #noEstoques>
+      <div class="msg-empty">
+        Nenhum estoque encontrado!
+      </div>
+    </ng-template>
+
+    <!-- <ion-toast [isOpen]="isToastOpen" [message]="messageToast"  [duration]="3000" (didDismiss)="setOpen(false)" ></ion-toast> -->
+
+    <ion-modal id="example-modal" #modal trigger="open-custom-dialog-estoque"  >
+      <ng-template>
+        <form  >
+        
+        <div class="wrapper">
+          <h1>Estoque</h1>
+  
+          <div class="container-list-modal">
+          <ion-list>
+            <ion-item class="ion-no-padding">
+              <ion-input formControlName="nomeLista" labelPlacement='floating' label="Nome do Estoque" ></ion-input>
+            </ion-item>
+
+          </ion-list>
+            <ion-button type="submit"  expand="block" id="opne-custom-dialog" class="button-category ion-margin-top">
+              currentEstoque ? 'Atualizar' : 'Adicionar' 
+              <ion-icon name="save-outline" class="icon-button icon-save"></ion-icon>
+            </ion-button>
+        
+        </div>
+      </div>
+    </form>
+      </ng-template>
+    </ion-modal>
+ 
+</ion-content>
